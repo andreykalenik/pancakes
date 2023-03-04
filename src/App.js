@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate} from 'react-router-dom';
 import './App.css';
 import MainPage from './components/pages/MainPage';
 import CommentsPage from './components/pages/CommentsPage';
@@ -9,10 +9,11 @@ function App() {
   return (
     <section>
       <Routes>
-        <Route path='/' element = {<MainPage/>}/>
+        <Route path='/main' element = {<MainPage/>}/>
         <Route path='/users' element = {<UsersPage/>}/>
         <Route path='/comments' element = {<CommentsPage/>}/>
         <Route path='/posts' element = {<PostsPage/>}/>
+        <Route index element={<Navigate to="/main" replace />} />
       </Routes>
     </section>
   );
