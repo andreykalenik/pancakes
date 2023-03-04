@@ -9,7 +9,7 @@ function App() {
   return (
     <section>
       <Routes>
-        <Route path='/main' element = {<MainPage/>}/>
+        <Route path='/' element = {<MainPage/>}/>
         <Route path='/users' element = {<UsersPage/>}/>
         <Route path='/comments' element = {<CommentsPage/>}/>
         <Route path='/posts' element = {<PostsPage/>}/>
